@@ -1,24 +1,43 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+
+
+
+
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+    /* font-family: ‘Nunito’, sans-serif; */
+    font-family: 'Cormorant Garamond', serif;
+    /* cursor: url('cursor.cur'),auto !important; */
+    cursor: url("cur.png"), url("cur.cur"), default;
+    cursor: url(cur.png), auto;
+    cursor: crosshair;
 }
+
 
 a {
   color: inherit;
   text-decoration: none;
+  cursor: url("cur.png"), url("cur.cur"), default;
+  cursor: url(cur.png), auto;
+  cursor: crosshair;
 }
 
 * {
   box-sizing: border-box;
 }
 
-img {
+/* img {
   max-width: 100%;
   height: auto;
-}
+} */
 
 h1,
 h2,
@@ -36,3 +55,9 @@ button {
   padding: 0.5rem 1rem;
   font-weight: bold;
 }
+
+/* 
+.mainImage{
+  height: 100vh;
+  width: 100vw;
+} */

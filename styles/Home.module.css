@@ -1,4 +1,4 @@
-.container {
+/* .container {
   min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
@@ -87,5 +87,321 @@
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+} 
+
+
+main {
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer {
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer img {
+  margin-left: 0.5rem;
+}
+footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+code {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+}
+        
+        */
+
+/* ---------- cursor */
+
+.cursorimg {
+  position: absolute;
+  z-index: 10000;
+  pointer-events: none;
+  transition-duration: 1.5s;
+}
+
+/*---------------------- post */
+
+.feed {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.post {
+  cursor: pointer;
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+.mainImage {
+  width: 500px;
+  width: 100vw;
+  transition: 0.2s;
+  max-width: 100vw;
+  max-height: 90vw;
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* .post:hover .mainImage {
+  width: 490px;
+  transition: 0.2s;
+} */
+
+/*---------------------- footer */
+
+.footercopy {
+  margin: 0 auto;
+  width: 800px;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.footercopyright {
+  list-style: none;
+  font-size: 16px;
+  line-height: 50px;
+  vertical-align: top;
+  text-decoration: none;
+  /* font-family: Muli; */
+  text-transform: uppercase;
+  font-family: "Cormorant Garamond", serif;
+  /* font-weight: lighter; */
+  padding: 0;
+  margin: 0;
+  /* color: #F561C3; */
+}
+
+.footercopyright li {
+  position: relative;
+}
+
+.footercopyright li {
+  display: inline-block;
+  padding-right: 10px;
+  padding-left: 10px;
+  z-index: 1;
+}
+
+.footercopyright li:before {
+  content: "";
+  height: 20px;
+  width: 1px;
+  background-color: rgb(0 0 0 / 20%);
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 16px;
+}
+
+.footercopyright li:last-child:before {
+  content: unset;
+}
+
+.footercopyright a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* logo-------------- */
+
+.logorow {
+  text-align: center;
+}
+.logo {
+  width: 187.5px;
+  height: 112.5px;
+  text-align: center;
+  /* position: fixed;
+  top: 0px;
+  right: auto;
+  left:48%; */
+  margin-top: 60px;
+  position: absolute;
+  position: fixed;
+  top: 0%;
+  left: 45%;
+  right: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: floating 2800ms infinite ease-in-out;
+  animation: floating 2800ms infinite ease-in-out;
+  filter: drop-shadow(0 0 0.75rem white);
+}
+
+@keyframes floating {
+  from {
+    -webkit-transform: translate(0, 0px);
+    transform: translate(0, 0px);
+  }
+  65% {
+    -webkit-transform: translate(0, 15px);
+    transform: translate(0, 15px);
+  }
+  to {
+    -webkit-transform: translate(0, -0px);
+    transform: translate(0, -0px);
+  }
+}
+
+/* ---------- menu  */
+
+/* define a fixed width for the entire menu */
+.navigation {
+  width: 200px;
+  position: fixed;
+  top: 57%;
+  left: 51%;
+  right: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  border-radius: 42% 21% 78% 10% / 10% 28% 22% 50%;
+  background-color: #fafafa42;
+  padding: 3vw 3vw 3vw;
+}
+
+@media screen and (max-width: 1500px) and (min-width: 749px) .navigation {
+  padding-left: 4vw !important;
+}
+
+/* reset our lists to remove bullet points and padding */
+.mainmenu,
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* make ALL links (main and submenu) have padding and background color */
+.mainmenu a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  /* transform: skew(0deg, 15deg); */
+  transform: rotate(10deg);
+  -webkit-animation: floatnav 2800ms infinite ease-in-out;
+  animation: floatnav 2800ms infinite ease-in-out;
+  z-index: 2;
+}
+
+.mainmenu li:nth-child(even) {
+  -webkit-animation: floatnav2 2800ms infinite ease-in-out;
+  animation: floatnav2 2800ms infinite ease-in-out;
+}
+
+/* .mainmenu li:nth-child(1) {
+  background: url(cur.cur) 50%;
+} */
+
+.buttonback {
+  position: absolute;
+  width: 70%;
+  top: 10%;
+  left: 15%;
+  z-index: 0 !important;
+  pointer-events: none;
+  /* filter: drop-shadow(0 0 0.75rem #ff0097); */
+}
+
+/* add hover behaviour */
+.mainmenu a:hover {
+  /* background-color: #C5C5C5; */
+  filter: drop-shadow(0 0 0.75rem #ff0097);
+}
+
+/* when hovering over a .mainmenu item,
+  display the submenu inside it.
+  we're changing the submenu's max-height from 0 to 200px;
+*/
+
+.mainmenu li:hover .submenu {
+  display: block;
+  max-height: 200px;
+  filter: drop-shadow(0 0 0.75rem #ff0097);
+}
+
+/*
+  we now overwrite the background-color for .submenu links only.
+  CSS reads down the page, so code at the bottom will overwrite the code at the top.
+*/
+
+.submenu a {
+  /* background-color: #999; */
+}
+
+/* hover behaviour for links inside .submenu */
+.submenu a:hover {
+  /* background-color: #666; */
+  filter: drop-shadow(0 0 0.75rem #ff0097);
+}
+
+/* this is the initial state of all submenus.
+  we set it to max-height: 0, and hide the overflowed content.
+*/
+.submenu {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-out;
+}
+
+@keyframes floatnav {
+  0% {
+    /* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+    transform: translatex(-5px);
+    transform: rotate(10deg);
+  }
+  50% {
+    /* box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
+    transform: translatex(0px);
+    transform: rotate(10deg);
+  }
+  100% {
+    /* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+    transform: translatex(-5px);
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes floatnav2 {
+  0% {
+    /* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+    transform: translatex(5px);
+    transform: rotate(10deg);
+  }
+  50% {
+    /* box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
+    transform: translatex(-5px);
+    transform: rotate(10deg);
+  }
+  100% {
+    /* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+    transform: translatex(5px);
+    transform: rotate(10deg);
   }
 }
